@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --base-href https://pi3ky.github.io/portfolio/ && angular-cli-ghpages --branch main"
   },
   "private": true,
   "dependencies": {
