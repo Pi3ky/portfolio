@@ -1,9 +1,32 @@
 <div class="home_container">
-  <h1>Bùi Đình Khang</h1>
-  <p>Hello 👋 I'm</p>
-  <section class="animation">
-    <div class="first"><div>Carlos Córdova</div></div>
-    <div class="second"><div>Web Developer</div></div>
-    <div class="third"><div>Systems Engineer</div></div>
-  </section>
+  <div class="wrap">
+    <div class="short_details--top">
+      <h1>{{infomation.name}}</h1>
+      <div class="detail_job--animation">{{myJob}}</div>
+    </div>
+    <table class="table table-borderless full_details--bottom">
+      <tbody>
+        <tr>
+          <td><span class="title">Age</span></td>
+          <td class="value">{{ infomation.age }}</td>
+        </tr>
+        <tr>
+          <td><span class="title">Address</span></td>
+          <td class="value">{{ infomation.address }}</td>
+        </tr>
+        <tr>
+          <td><span class="title">Contact</span></td>
+          <td class="value">{{ infomation.email }}</td>
+        </tr>
+        <tr>
+          <td><span class="title">Phone</span></td>
+          <td class="value">{{ infomation.phone }}</td>
+        </tr>
+        <tr>
+          <td><span class="title">Freelance</span></td>
+          <td class="value">{{ infomation.onWork ? 'Unavailable' : 'Available' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

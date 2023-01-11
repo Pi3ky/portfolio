@@ -1,8 +1,10 @@
+@import "../_styles/variables.scss";
+
 .portfolio_page--container {
   display: grid;
   grid-template-columns: 1fr;
 }
-.portfolio_page--container:has(#open_sidebar[type="checkbox"]:checked) > .portfolio_header--side{
+.portfolio_page--container:has(.menu_toggle[open]) > .portfolio_header--side{
   margin-left: 0%;
 }
 .portfolio_header--side {
@@ -10,6 +12,7 @@
   height: calc(100vh - 50px);
   margin-top: 50px;
   margin-left: -100%;
+  z-index: 1000;
   position: absolute;
   width: min(100%, 320px);
   background-color: #ffffff;
@@ -50,7 +53,7 @@
   background-color: #eee;
 }
 .header_side-menu li.active a:after {
-  background-color: #e65959;
+  background-color: $primary;
 }
 
 .header_side-social {
@@ -78,9 +81,9 @@
 }
 
 // Main
-.portfolio_main--content {
-  margin-top: 50px;
-}
+// .portfolio_main--content {
+//   margin-top: 50px;
+// }
 .page_home {
   background: url(https://lmpixels.com/demo/sunshine-demo/sunshine-version-2/sunshine-html-template-red/images/home_page_bg_2.jpg) no-repeat center center;
   min-height: 100%;
@@ -105,6 +108,14 @@
   color: #000000;
 }
 
+details.menu_toggle {
+  & > summary {
+    list-style: none;
+    &::-webkit-details-marker {
+      display:none;
+    }
+  }
+}
 // Desktop browsers
 @media screen and (min-width: 1024px) {
 

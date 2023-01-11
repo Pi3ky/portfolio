@@ -1,3 +1,4 @@
+@import "../../../_styles/variables.scss";
 .home_container {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -7,42 +8,32 @@
   align-items: center;
   color: #fff;
 }
-.animation {
-  height:50px;
-  overflow:hidden;
-  margin-left: 1rem;
+.short_details--top {
+  text-align: center;
+  margin: 0 auto 2rem;
 }
-
-.animation > div > div {
-  padding: 0.25rem 0.75rem;
-  height:2.81rem;
-  margin-bottom: 2.81rem;
-  display:inline-block;
+.detail_job--animation {
+  color: #eeeeee;
+  font-size: 1rem;
+  min-height: 24px;
+  text-shadow: 1px 1px #111;
+  font-weight: 700;
 }
-
-.animation div:first-child {
-  animation: text-animation 8s infinite;
-}
-
-.first div {
-  color:#20a7d8;
-}
-.second div {
-  color:#CD921E;
-}
-.third div {
-  color:#c10528;
-}
-
-@keyframes text-animation {
-  0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
-  90% {margin-top: 0;}
-  100% {margin-top: 0;}
+.full_details--bottom {
+  color: #eee;
+  tr {
+    margin-bottom: 0.5rem;
+    .title {
+      position: relative;
+      padding-bottom: 2px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid $primary;
+      }
+    }
+  }
 }
