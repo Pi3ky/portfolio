@@ -18,11 +18,11 @@
       <p class="header_details--desc text-secondary">{{ portfolio.desc }}</p>
     </div>
     <ul class="list-unstyled header_side-menu mb-5">
-      <li class="active"><a class="text-decoration-none" href="#home">Home</a></li>
-      <li><a class="text-decoration-none" href="#about-me">About me</a></li>
-      <li><a class="text-decoration-none" href="#resume">Resume</a></li>
-      <li><a class="text-decoration-none" href="#portfolio">Portfolio</a></li>
-      <li><a class="text-decoration-none" href="#contact-me">Contact me</a></li>
+      <li class="active"><a class="text-decoration-none router_link" href="#home">Home</a></li>
+      <li><a class="text-decoration-none router_link" href="#about-me">About me</a></li>
+      <li><a class="text-decoration-none router_link" href="#resume">Resume</a></li>
+      <li><a class="text-decoration-none router_link" href="#portfolio">Portfolio</a></li>
+      <li><a class="text-decoration-none router_link" href="#contact-me">Contact me</a></li>
     </ul>
     <ul class="list-unstyled header_side-social">
       <li *ngFor="let item of socials">
@@ -33,8 +33,11 @@
     </ul>
   </header>
   <main class="portfolio_main--content">
-    <section data-id="home" class="page_home">
+    <section id="home" class="page_home">
       <home></home>
+    </section>
+    <section id="about-me" class="page">
+      <about-me></about-me>
     </section>
   </main>
 </div>
