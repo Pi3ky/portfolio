@@ -37,4 +37,41 @@ export class AppComponent {
       bg: '#0077b5'
     },
   ]
+  currentPage: string = 'home';
+
+  listPage = [
+    {
+      id: 'home',
+      route: '#home',
+      name: 'Home',
+    },
+    {
+      id: 'about-me',
+      route: '#about-me',
+      name: 'About me'
+    },
+    {
+      id: 'resume',
+      route: '#resume',
+      name: 'Resume'
+    },
+    {
+      id: 'portfolio',
+      route: '#portfolio',
+      name: 'Portfolio'
+    },
+    {
+      id: 'contact-me',
+      route: '#contact-me',
+      name: 'Contact me'
+    },
+  ]
+  constructor(){}
+
+  ngOnInit(): void {
+  }
+
+  changePage(pageId: string) {
+    this.currentPage = pageId;
+  }
 }

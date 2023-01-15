@@ -1,6 +1,6 @@
 <div class="portfolio_page--container">
   <div class="portfolio_header--mobile">
-    <h5 class="mb-0 text-secondary">#Ka</h5>
+    <h5 class="mb-0 text-secondary ms-4">#Ka</h5>
     <details class="menu_toggle">
       <summary class="icon_hamburger">
         <div></div>
@@ -18,16 +18,16 @@
       <p class="header_details--desc text-secondary">{{ portfolio.desc }}</p>
     </div>
     <ul class="list-unstyled header_side-menu mb-5">
-      <li class="active"><a class="text-decoration-none router_link" href="#home">Home</a></li>
-      <li><a class="text-decoration-none router_link" href="#about-me">About me</a></li>
-      <li><a class="text-decoration-none router_link" href="#resume">Resume</a></li>
-      <li><a class="text-decoration-none router_link" href="#portfolio">Portfolio</a></li>
-      <li><a class="text-decoration-none router_link" href="#contact-me">Contact me</a></li>
+      <ng-container *ngFor="let page of listPage">
+        <li [ngClass]="{'active': currentPage === page.id}">
+          <a class="text-decoration-none router_link" [href]="page.route" (click)="changePage(page.id)">{{page.name}}</a>
+        </li>
+      </ng-container>
     </ul>
     <ul class="list-unstyled header_side-social">
       <li *ngFor="let item of socials">
         <a class="text-decoration-none social_link" style="--clr: {{item.bg}}" [href]="item.link" target="_blank">
-          <i class="fa-brands fs-5 {{item.fa}}"></i>
+          <i class="fa-brands fs-4 {{item.fa}}"></i>
         </a>
       </li>
     </ul>

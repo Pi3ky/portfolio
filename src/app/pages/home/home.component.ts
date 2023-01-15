@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   skip_delay = 15;
   speed = 70;
   infomation = {
-    name: "Bui Đinh Khang",
+    name: "Khang Bui Dinh",
     shortName: "Ka",
     age: 24,
     address: "Me Linh District, Hanoi",
