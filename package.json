@@ -1,13 +1,13 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --base-href https://pi3ky.github.io/portfolio/ && angular-cli-ghpages --branch main"
+    "deploy": "ng build --output-path docs --base-href https://pi3ky.github.io/portfolio/"
   },
   "private": true,
   "dependencies": {

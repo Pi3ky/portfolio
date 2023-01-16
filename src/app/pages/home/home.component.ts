@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
   infomation = {
     name: "Khang Bui Dinh",
     shortName: "Ka",
-    age: 24,
+    age: 25,
     address: "Me Linh District, Hanoi",
     email: "ka.0709fe@gmail.com",
     phone: "+84 38 662 4545",
-    onWork: false
+    onWork: true
   }
   constructor() {}
 
